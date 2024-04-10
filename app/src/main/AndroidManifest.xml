@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+
+    <application
+        android:name=".App"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MobileDevelopmentCourseLabApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+    <?xml version="1.0" encoding="utf-8"?> // Объявление версии XML и кодировки файла
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" // Корневой элемент манифеста, определяющий пространство имен для Android
+    xmlns:tools="http://schemas.android.com/tools"> // Объявление пространства имен для инструментов
+
+    // Запрос разрешения на использование интернета
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    // Элемент application, описывающий приложение
+<application
+android:name=".App" // Указание имени класса приложения (App)
+    android:icon="@mipmap/ic_launcher" // Указание иконки приложения
+    android:label="@string/app_name" // Указание названия приложения
+    android:roundIcon="@mipmap/ic_launcher_round" // Указание круглой иконки приложения
+    android:supportsRtl="true" // Поддержка языков с написанием справа налево
+    android:theme="@style/Theme.MobileDevelopmentCourseLabApp" // Указание темы приложения
+    tools:targetApi="31"> // Указание целевого API для инструментов
+
+    // Элемент activity, описывающий основную активность приложения
+<activity
+android:name=".MainActivity" // Указание имени класса MainActivity
+    android:exported="true"> // Указание, что активность может быть запущена другими приложениями
+
+    // Элемент intent-filter, определяющий фильтры намерений для запуска активности
+<intent-filter>
+// Фильтр для основного действия
+<action android:name="android.intent.action.MAIN" />
+// Фильтр для категории запуска
+<category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+    </activity>
+    </application>
+
+    </manifest> // Закрывающий тег манифеста

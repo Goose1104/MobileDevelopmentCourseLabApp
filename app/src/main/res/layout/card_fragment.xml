@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/icon_48"
+        android:layout_height="@dimen/icon_48"
+        android:src="@drawable/baseline_account_box_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/offset_small"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tShirt"
+        android:text="@string/name"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/tShirt"
+        android:layout_width="@dimen/icon_48"
+        android:layout_height="@dimen/icon_48"
+        android:src="@drawable/t_shirt"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tShirt"
+        app:layout_constraintStart_toStartOf="@+id/tShirt"
+        app:layout_constraintEnd_toEndOf="@+id/tShirt"
+        app:layout_constraintTop_toTopOf="@+id/tShirt"
+        android:textColor="@color/white"
+        android:text="@string/number"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/headerBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="icon, number, tShirt"/>
+
+    <TextView
+        android:id="@+id/infoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/offset_medium"
+        android:text="@string/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/headerBarrier"
+        android:textStyle="bold"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/titleBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:barrierMargin="@dimen/offset_small"
+        app:constraint_referenced_ids="ageTitle, positionTitle, teamTitle"/>
+
+    <TextView
+        android:id="@+id/ageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ageTitle"
+        app:layout_constraintTop_toBottomOf="@+id/infoTitle"
+        android:layout_marginTop="@dimen/offset_small"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/offset_small"
+        android:text="@string/age29"
+        app:layout_constraintTop_toBottomOf="@+id/infoTitle"
+        app:layout_constraintStart_toStartOf="@id/titleBarrier"/>
+
+    <TextView
+        android:id="@+id/positionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/positionTitle"
+        android:layout_marginTop="@dimen/offset_small"
+        app:layout_constraintTop_toBottomOf="@id/ageTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/positionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/offset_small"
+        android:text="@string/positionValues"
+        app:layout_constraintTop_toBottomOf="@id/ageTitle"
+        app:layout_constraintStart_toStartOf="@id/titleBarrier"/>
+
+    <TextView
+        android:id="@+id/teamTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/teamTitle"
+        android:layout_marginTop="@dimen/offset_small"
+        app:layout_constraintTop_toBottomOf="@+id/positionTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"/>
+    
+    <TextView
+        android:id="@+id/teamValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/offset_small"
+        android:text="@string/teamValue"
+        app:layout_constraintTop_toBottomOf="@id/positionTitle"
+        app:layout_constraintStart_toStartOf="@id/titleBarrier"/>
+
+    <TextView
+        android:id="@+id/stata"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:text="@string/Stat"
+        android:layout_marginTop="@dimen/offset_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamValue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/manyGame"
+        android:background="#808080"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/manyGame"
+        android:padding="@dimen/background"
+        android:layout_marginTop="@dimen/background"
+        android:text="@string/manyGame"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stata"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/gol"
+        android:background="#30d5c8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/background"
+        android:text="@string/gol"
+        app:layout_constraintStart_toEndOf="@id/manyGame"
+        app:layout_constraintTop_toTopOf="@id/manyGame"
+        android:layout_marginStart="@dimen/gol"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/pass"
+        android:background="#8b00ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/background"
+        android:text="@string/pass"
+        app:layout_constraintStart_toEndOf="@id/gol"
+        app:layout_constraintTop_toTopOf="@id/gol"
+        android:layout_marginStart="@dimen/pass"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/yellow"
+        android:background="#ffff00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/yellow"
+        android:padding="@dimen/background"
+        android:layout_marginTop="@dimen/background"
+        android:text="@string/yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/red"
+        android:background="#ff0000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/background"
+        android:text="@string/red"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@id/yellow"
+        app:layout_constraintTop_toTopOf="@id/yellow"
+        android:layout_marginStart="@dimen/red"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/football"
+        android:layout_width="@dimen/football"
+        android:layout_height="@dimen/football"
+        android:src="@drawable/football_field"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/red"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
